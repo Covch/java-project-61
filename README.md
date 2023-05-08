@@ -11,3 +11,6 @@ CalcGame:
 
 GcdGame:
 [![asciicast](https://asciinema.org/a/Eylajv8F5F46nnmWyEWUqvo6J.svg)](https://asciinema.org/a/Eylajv8F5F46nnmWyEWUqvo6J?autoplay=1)
+
+ArithmeticGame:
+[![asciicast](https://asciinema.org/a/KWd4R3hAPsxZ8mPlFak4Ciptx.svg)](https://asciinema.org/a/KWd4R3hAPsxZ8mPlFak4Ciptx?autoplay=1)

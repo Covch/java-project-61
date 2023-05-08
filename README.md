@@ -7,4 +7,7 @@ EvenGame:
 [![asciicast](https://asciinema.org/a/oIPLKzfTgXQBaGBYMziBZZSD8.svg)](https://asciinema.org/a/oIPLKzfTgXQBaGBYMziBZZSD8?autoplay=1)
 
 CalcGame:
-[![asciicast](https://asciinema.org/a/10SpIZ2Gf0kySl8dHwYK5MGqj.svg)](https://asciinema.org/a/10SpIZ2Gf0kySl8dHwYK5MGqj)
+[![asciicast](https://asciinema.org/a/10SpIZ2Gf0kySl8dHwYK5MGqj.svg)](https://asciinema.org/a/10SpIZ2Gf0kySl8dHwYK5MGqj?autoplay=1)
+
+GcdGame:
+[![asciicast](https://asciinema.org/a/Eylajv8F5F46nnmWyEWUqvo6J.svg)](https://asciinema.org/a/Eylajv8F5F46nnmWyEWUqvo6J?autoplay=1)

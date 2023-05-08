@@ -4,6 +4,7 @@ import hexlet.code.games.ArithmeticProgressionGame;
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
 import hexlet.code.games.GcdGame;
+import hexlet.code.games.PrimeGame;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -18,7 +19,8 @@ public class MainMenu {
                 new EvenGame(),
                 new CalcGame(),
                 new GcdGame(),
-                new ArithmeticProgressionGame()
+                new ArithmeticProgressionGame(),
+                new PrimeGame()
         );
         System.out.println("1 - Greet");
         ordinalToEngineMap.values().forEach(Game::printGame);

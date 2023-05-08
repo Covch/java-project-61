@@ -14,3 +14,6 @@ GcdGame:
 
 ArithmeticGame:
 [![asciicast](https://asciinema.org/a/KWd4R3hAPsxZ8mPlFak4Ciptx.svg)](https://asciinema.org/a/KWd4R3hAPsxZ8mPlFak4Ciptx?autoplay=1)
+
+PrimeGame:
+[![asciicast](https://asciinema.org/a/1OxbR6Kn9rqgmCmpkwgujIcdQ.svg)](https://asciinema.org/a/1OxbR6Kn9rqgmCmpkwgujIcdQ?autoplay=1)

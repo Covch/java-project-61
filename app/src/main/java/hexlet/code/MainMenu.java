@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 
 public class MainMenu {
     public static void mainMenu(Scanner sc) {
+        System.out.println("Welcome to the Brain Games!");
         System.out.println("Please enter the game number and press Enter.");
         Map<Integer, Engine> ordinalToEngineMap = createGameMap(
                 new EvenGame(),

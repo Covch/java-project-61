@@ -39,8 +39,8 @@ public class CalcGame {
 
         private final String operation;
 
-        MathOperation(String operation) {
-            this.operation = operation;
+        MathOperation(String currentOperation) {
+            operation = currentOperation;
         }
 
         public abstract int calc(int num1, int num2);

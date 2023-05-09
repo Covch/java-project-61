@@ -38,11 +38,11 @@ public abstract class Engine {
         System.out.printf("Congratulations, %s!%n", userName);
     }
 
-    public static void setQuestion(String question) {
-        Engine.question = question;
+    public static void setQuestion(String currentQuestion) {
+        question = currentQuestion;
     }
 
-    public static void setCorrectAnswer(String correctAnswer) {
-        Engine.correctAnswer = correctAnswer;
+    public static void setCorrectAnswer(String currentCorrectAnswer) {
+        correctAnswer = currentCorrectAnswer;
     }
 }

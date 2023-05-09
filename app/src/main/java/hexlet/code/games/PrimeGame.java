@@ -1,35 +1,18 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.MathUtils;
 
-import java.util.stream.IntStream;
-
-public class PrimeGame extends Engine {
+public class PrimeGame {
     private static final int MAX_INT = 100;
 
-    @Override
-    protected String getGameCondition() {
+    public static String getGameCondition() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
-    @Override
-    protected String askQuestionAndGetCorrectAnswer() {
-        int randomNumber = random.nextInt(MAX_INT);
-        System.out.printf("Question: %s%n", randomNumber);
-        return checkPrime(randomNumber) ? "yes" : "no";
-    }
-
-    private boolean checkPrime(int num) {
-        return IntStream.range(2, num).noneMatch(i -> num % i == 0);
-    }
-
-    @Override
-    public int getOrdinal() {
-        return 6;
-    }
-
-    @Override
-    public String getName() {
-        return "Prime";
+    public static void engineQuestionUpdate() {
+        int randomNumber = Engine.RANDOM.nextInt(MAX_INT);
+        Engine.setQuestion(String.valueOf(randomNumber));
+        Engine.setCorrectAnswer(MathUtils.checkPrime(randomNumber) ? "yes" : "no");
     }
 }

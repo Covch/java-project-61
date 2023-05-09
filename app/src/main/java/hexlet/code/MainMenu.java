@@ -6,42 +6,53 @@ import hexlet.code.games.EvenGame;
 import hexlet.code.games.GcdGame;
 import hexlet.code.games.PrimeGame;
 
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
 public class MainMenu {
-    public static void mainMenu(Scanner sc) {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.println("Please enter the game number and press Enter.");
-        Map<Integer, Engine> ordinalToEngineMap = createGameMap(
-                new EvenGame(),
-                new CalcGame(),
-                new GcdGame(),
-                new ArithmeticProgressionGame(),
-                new PrimeGame()
-        );
-        System.out.println("1 - Greet");
-        ordinalToEngineMap.values().forEach(Game::printGame);
-        System.out.println("0 - Exit");
-        System.out.print("Your choice: ");
+    private static final String MAIN_MENU_CONTENTS = """
+            Welcome to the Brain Games!
+            Please enter the game number and press Enter.
+            1 - Greet
+            2 - Even
+            3 - Calc
+            4 - GCD
+            5 - Greet
+            6 - Prime
+            0 - Exit
+            """;
+
+    public static void mainMenu() {
+        System.out.println(MAIN_MENU_CONTENTS);
         try {
-            int choice = sc.nextInt();
-            if (choice == 1) {
-                Cli.newUserGreetings(sc);
-            }
-            if (choice > 1) {
-                ordinalToEngineMap.get(choice).game(sc);
+            int choice = App.SCANNER.nextInt();
+            switch (choice) {
+                case 0:
+                    break;
+                case 1:
+                    Cli.newUserGreetings();
+                    break;
+                case 2:
+                    Engine.playGame(EvenGame.getGameCondition(), EvenGame::engineQuestionUpdate);
+                    break;
+                case 3:
+                    Engine.playGame(CalcGame.getGameCondition(), CalcGame::engineQuestionUpdate);
+                    break;
+                case 4:
+                    Engine.playGame(GcdGame.getGameCondition(), GcdGame::engineQuestionUpdate);
+                    break;
+                case 5:
+                    Engine.playGame(
+                            ArithmeticProgressionGame.getGameCondition(),
+                            ArithmeticProgressionGame::engineQuestionUpdate
+                    );
+                    break;
+                case 6:
+                    Engine.playGame(PrimeGame.getGameCondition(), PrimeGame::engineQuestionUpdate);
+                    break;
+                default:
+                    System.out.println("Unnsupportable option. Please choose something else.");
             }
         } catch (Exception e) {
             System.out.println("Incorrect input. Please try again.");
         }
         System.out.println("Good bye!");
-    }
-
-    private static Map<Integer, Engine> createGameMap(Engine... games) {
-        return Arrays.stream(games).collect(Collectors.toMap(Game::getOrdinal, Function.identity()));
     }
 }

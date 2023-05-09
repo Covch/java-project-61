@@ -1,33 +1,20 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.Game;
 
-public class CalcGame extends Engine implements Game {
+public class CalcGame {
     private static final int MAX_NUMBER = 20;
 
-    @Override
-    protected String getGameCondition() {
+    public static String getGameCondition() {
         return "What is the result of the expression?";
     }
 
-    @Override
-    protected String askQuestionAndGetCorrectAnswer() {
-        int num1 = random.nextInt(MAX_NUMBER);
-        int num2 = random.nextInt(MAX_NUMBER);
-        MathOperation mathOperation = MathOperation.values()[random.nextInt(MathOperation.values().length)];
-        System.out.printf("Question: %s %s %s%n", num1, mathOperation.getOperation(), num2);
-        return String.valueOf(mathOperation.calc(num1, num2));
-    }
-
-    @Override
-    public int getOrdinal() {
-        return 3;
-    }
-
-    @Override
-    public String getName() {
-        return "Calc";
+    public static void engineQuestionUpdate() {
+        int num1 = Engine.RANDOM.nextInt(MAX_NUMBER);
+        int num2 = Engine.RANDOM.nextInt(MAX_NUMBER);
+        MathOperation mathOperation = MathOperation.values()[Engine.RANDOM.nextInt(MathOperation.values().length)];
+        Engine.setQuestion(num1 + " " + mathOperation.getOperation() + " " + num2);
+        Engine.setCorrectAnswer(String.valueOf(mathOperation.calc(num1, num2)));
     }
 
     private enum MathOperation {

@@ -2,39 +2,30 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class ArithmeticProgressionGame extends Engine {
+public class ArithmeticProgressionGame {
     private static final int PROGRESSION_LENGTH = 10;
     private static final int MAX_STEP = 10;
     private static final int MAX_INIT_NUMBER = 20;
 
-    @Override
-    protected String getGameCondition() {
+    public static String getGameCondition() {
         return "What number is missing in the progression?";
     }
 
-    @Override
-    protected String askQuestionAndGetCorrectAnswer() {
-        int initNumber = random.nextInt(MAX_INIT_NUMBER);
-        int step = random.nextInt(MAX_STEP);
-        int missedElementIndex = random.nextInt(PROGRESSION_LENGTH) + 1;
-        System.out.print("Question: ");
+    public static void engineQuestionUpdate() {
+        int initNumber = Engine.RANDOM.nextInt(MAX_INIT_NUMBER);
+        int step = Engine.RANDOM.nextInt(MAX_STEP);
+        int missedElementIndex = Engine.RANDOM.nextInt(PROGRESSION_LENGTH) + 1;
+        StringBuilder question = new StringBuilder();
         for (int progressionCounter = 1; progressionCounter <= PROGRESSION_LENGTH; progressionCounter++) {
             int currentProgression = initNumber + step * progressionCounter;
-            System.out.print(
-                    (progressionCounter == missedElementIndex ? ".." : currentProgression) + " "
-            );
+            if (progressionCounter == missedElementIndex) {
+                question.append("..");
+                Engine.setCorrectAnswer(String.valueOf(currentProgression));
+            } else {
+                question.append(currentProgression);
+            }
+            question.append(" ");
         }
-        System.out.println();
-        return String.valueOf(initNumber + step * missedElementIndex);
-    }
-
-    @Override
-    public int getOrdinal() {
-        return 5;
-    }
-
-    @Override
-    public String getName() {
-        return "Progression";
+        Engine.setQuestion(question.toString());
     }
 }

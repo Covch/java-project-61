@@ -1,11 +1,9 @@
 package hexlet.code;
 
-import java.util.Scanner;
-
 public class Cli {
-    public static String newUserGreetings(Scanner sc) {
+    public static String newUserGreetings() {
         System.out.print("May I have your name? ");
-        String userName = sc.next();
+        String userName = App.SCANNER.next();
         System.out.println("Hello, " + userName + "!");
         return userName;
     }

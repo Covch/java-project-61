@@ -8,8 +8,8 @@ public class ArithmeticProgressionGame extends Engine {
     private static final int MAX_INIT_NUMBER = 20;
 
     @Override
-    protected void printGameCondition() {
-        System.out.println("What number is missing in the progression?");
+    protected String getGameCondition() {
+        return "What number is missing in the progression?";
     }
 
     @Override

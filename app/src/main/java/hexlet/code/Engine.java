@@ -13,7 +13,7 @@ public abstract class Engine implements Game {
 
     public void game(Scanner scanner) {
         String userName = Cli.newUserGreetings(scanner);
-        printGameCondition();
+        System.out.println(getGameCondition());
         for (int round = 1; round <= MAX_ROUNDS; round++) {
             String correctAnswer = askQuestionAndGetCorrectAnswer();
             String userAnswer = getUserAnswer(scanner);
@@ -28,7 +28,7 @@ public abstract class Engine implements Game {
         System.out.printf("Congratulations, %s!%n", userName);
     }
 
-    protected abstract void printGameCondition();
+    protected abstract String getGameCondition();
 
     protected abstract String askQuestionAndGetCorrectAnswer();
 

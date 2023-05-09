@@ -6,8 +6,8 @@ public class GcdGame extends Engine {
     private static final int MAX_INT = 20;
 
     @Override
-    protected void printGameCondition() {
-        System.out.println("Find the greatest common divisor of given numbers.");
+    protected String getGameCondition() {
+        return "Find the greatest common divisor of given numbers.";
     }
 
     @Override

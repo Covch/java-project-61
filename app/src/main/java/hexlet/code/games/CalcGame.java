@@ -7,8 +7,8 @@ public class CalcGame extends Engine implements Game {
     private static final int MAX_NUMBER = 20;
 
     @Override
-    protected void printGameCondition() {
-        System.out.println("What is the result of the expression?");
+    protected String getGameCondition() {
+        return "What is the result of the expression?";
     }
 
     @Override

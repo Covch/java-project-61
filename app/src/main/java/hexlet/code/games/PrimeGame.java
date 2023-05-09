@@ -2,16 +2,14 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.HashSet;
-import java.util.Set;
 import java.util.stream.IntStream;
 
 public class PrimeGame extends Engine {
     private static final int MAX_INT = 100;
 
     @Override
-    protected void printGameCondition() {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+    protected String getGameCondition() {
+        return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
     @Override

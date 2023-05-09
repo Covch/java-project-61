@@ -6,8 +6,8 @@ public class EvenGame extends Engine {
     private static final int MAX_INT = 1000;
 
     @Override
-    protected void printGameCondition() {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+    protected String getGameCondition() {
+        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
 
     @Override

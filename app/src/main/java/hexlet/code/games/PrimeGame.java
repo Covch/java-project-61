@@ -11,7 +11,7 @@ public class PrimeGame {
     }
 
     public static void engineQuestionUpdate() {
-        int randomNumber = Engine.RANDOM.nextInt(MAX_INT);
+        int randomNumber = Engine.RANDOM.nextInt(2, MAX_INT);
         Engine.setQuestion(String.valueOf(randomNumber));
         Engine.setCorrectAnswer(MathUtils.checkPrime(randomNumber) ? "yes" : "no");
     }

@@ -17,6 +17,7 @@ public class ArithmeticProgressionGame extends Engine {
         int initNumber = random.nextInt(MAX_INIT_NUMBER);
         int step = random.nextInt(MAX_STEP);
         int missedElementIndex = random.nextInt(PROGRESSION_LENGTH) + 1;
+        System.out.print("Question: ");
         for (int progressionCounter = 1; progressionCounter <= PROGRESSION_LENGTH; progressionCounter++) {
             int currentProgression = initNumber + step * progressionCounter;
             System.out.print(

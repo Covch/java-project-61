@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class ArithmeticProgressionGame {
+public class ProgressionGame {
     private static final int PROGRESSION_LENGTH = 10;
     private static final int MAX_STEP = 10;
     private static final int MAX_INIT_NUMBER = 20;
